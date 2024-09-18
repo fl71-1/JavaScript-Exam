@@ -1,0 +1,63 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.section1{
+    width: 100%;
+    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://timesprayer.today/images/header_background.png);
+    background-repeat:repeat-x ;
+    background-color: #688492;
+
+    
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 30%;
+    height: 50vh;
+    border-radius: 5vh;
+   
+    
+}
+input{
+    width: 80%;
+    height: 10%;
+    margin: 1.2vh;
+    font-size: 4vh;
+    border-radius: 2vh;
+    color: #688492;
+    border: 1px solid #688492 ;
+}
+button{
+    margin: 2vh;
+    width: 80%;
+    height: 10%;
+    border-radius: 2vh;
+    background-color:#688492 ;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+a{
+    color: #89a0ab;
+}
+a:hover{
+    margin: 2vh;
+    font-size: 1.5rem;
+    color: #688492;
+}
+i{
+    color: #688492;
+  font-size: 3rem;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="section1">
+      <form id="form-sign">
+        <i class="fa-solid fa-mosque"></i>
+        <input type="text" id="name-sign" placeholder="Name..." required />
+        <input type="email" id="email-sign" placeholder="email..." required />
+        <input
+          type="password"
+          id="pass-sign"
+          placeholder="password..."
+          required
+        />
+        <button id="button-log" type="submit">Log</button>
+      </form>
+    </div>
+    <script>
+      let sign = "https://66e7e6a0b17821a9d9da6efe.mockapi.io/login";
+      document
+        .getElementById("form-sign")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name-sign").value;
+          const email = document.getElementById("email-sign").value;
+          const pass = document.getElementById("pass-sign").value;
+
+          if (name.length < 3) {
+            alert("must be more than three letters !");
+           
+          }
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("must be email correct !");
+            return;
+          }
+          if (pass.length < 4) {
+            alert("must be more than four characters");
+           
+          }
+
+          fetch(sign, {
+            method: "POST",
+            body: JSON.stringify({
+             "username": name,
+              "password":pass,
+              "email": email
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+            console.log(data)
+            alert('Welcome, your registration has been completed successfully')
+            window.location.href="index.html"
+            return
+        });
+        });
+    </script>
+  </body>
+</html>
