@@ -52,3 +52,20 @@ color: #688492;
     background-color: rgb(198, 211, 217, 0.2);
     
 }
+@media (max-width: 768px) {
+    .section2{
+        width: 100%;
+    }
+    .section3{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .section3 i{
+        font-size: 15rem;
+        color: #c8d6dc;
+        margin-top: 10vw;
+       
+    
+    }
+}

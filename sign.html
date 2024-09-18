@@ -19,9 +19,7 @@
         <i class="fa-solid fa-mosque"></i>
         <input type="text" id="name-sign" placeholder="Name..." required />
         <input type="email" id="email-sign" placeholder="email..." required />
-        <input
-          type="password"
-          id="pass-sign"
+        <input type="password"id="pass-sign"
           placeholder="password..."
           required
         />
@@ -41,7 +39,6 @@
 
           if (name.length < 3) {
             alert("must be more than three letters !");
-           
           }
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(email)) {
@@ -50,15 +47,14 @@
           }
           if (pass.length < 4) {
             alert("must be more than four characters");
-           
           }
 
           fetch(sign, {
             method: "POST",
             body: JSON.stringify({
-             "username": name,
-              "password":pass,
-              "email": email
+              username: name,
+              password: pass,
+              email: email,
             }),
             headers: {
               "Content-type": "application/json; charset=UTF-8",
@@ -66,11 +62,13 @@
           })
             .then((response) => response.json())
             .then((data) => {
-            console.log(data)
-            alert('Welcome, your registration has been completed successfully')
-            window.location.href="index.html"
-            return
-        });
+              console.log(data);
+              alert(
+                "Welcome, your registration has been completed successfully"
+              );
+              window.location.href = "log.html";
+              return;
+            });
         });
     </script>
   </body>

@@ -54,6 +54,8 @@ button{
     color: #688492;
     font-weight: bolder;
 }
-#time-pary{
-    
+@media (max-width: 768px) {
+    .section5{
+        
+    }
 }

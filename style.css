@@ -1,23 +1,22 @@
-body{
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-.section1{
+
+.section1 {
     width: 100%;
-    height:80vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(https://timesprayer.today/images/header_background.png);
-    background-repeat:repeat-x ;
+    background-repeat: repeat-x;
     background-color: #688492;
-
-    
-
 }
-form{
+
+form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,38 +25,62 @@ form{
     width: 30%;
     height: 50vh;
     border-radius: 5vh;
-   
-    
 }
-input{
+
+input {
     width: 80%;
     height: 10%;
     margin: 1.2vh;
     font-size: 4vh;
     border-radius: 2vh;
     color: #688492;
-    border: 1px solid #688492 ;
+    border: 1px solid #688492;
 }
-button{
+
+button {
     margin: 2vh;
     width: 80%;
     height: 10%;
     border-radius: 2vh;
-    background-color:#688492 ;
+    background-color: #688492;
     color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
-
 }
-a{
+
+a {
     color: #89a0ab;
 }
-a:hover{
+
+a:hover {
     margin: 2vh;
     font-size: 1.5rem;
     color: #688492;
 }
-i{
+
+i {
     color: #688492;
-  font-size: 3rem;
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+        height: auto;
+        padding: 5vh;
+    }
+
+    input, button {
+        width: 100%;
+        font-size: 3vh;
+        height: 8vh;
+    }
+
+    button {
+        font-size: 1.8rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
 }
